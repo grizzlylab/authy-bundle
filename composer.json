@@ -1,0 +1,24 @@
+{
+    "name": "grizzlylab/authy-bundle",
+    "type": "symfony-bundle",
+    "description": "Authy bundle",
+    "keywords": ["Authy", "security", "authentication"],
+    "homepage": "https://github.com/grizzlylab/AuthyBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jean-Louis Pirson",
+            "email": "jl.pirson@grizzlylab.be"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "symfony/symfony": "~2.7|~3.0",
+        "authy/php": "~2.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Grizzlylab\\Bundle\\AuthyBundle\\": ""
+        }
+    }
+}

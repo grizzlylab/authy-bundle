@@ -1,0 +1,8 @@
+parameters:
+    grizzlylab_authy.class: Grizzlylab\Bundle\AuthyBundle\Service\AuthyService
+
+services:
+    grizzlylab_authy:
+        class: "%grizzlylab_authy.class%"
+        arguments:
+            - "%grizzlylab_authy_config%"
