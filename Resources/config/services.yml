@@ -1,8 +1,9 @@
-parameters:
-    grizzlylab_authy.class: Grizzlylab\Bundle\AuthyBundle\Service\AuthyService
-
 services:
-    grizzlylab_authy:
-        class: "%grizzlylab_authy.class%"
+    Grizzlylab\Bundle\AuthyBundle\Wrapper\AuthyApiWrapper:
         arguments:
-            - "%grizzlylab_authy_config%"
+            - "%grizzlylab_authy_api_key%"
+            - "%grizzlylab_authy_api_url%"
+
+    grizzlylab_authy:
+        alias: Grizzlylab\Bundle\AuthyBundle\Wrapper\AuthyApiWrapper
+        public: true

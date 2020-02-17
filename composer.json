@@ -1,24 +1,34 @@
 {
-    "name": "grizzlylab/authy-bundle",
-    "type": "symfony-bundle",
-    "description": "Authy bundle",
-    "keywords": ["Authy", "security", "authentication"],
-    "homepage": "https://github.com/grizzlylab/AuthyBundle",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Jean-Louis Pirson",
-            "email": "jl.pirson@grizzlylab.be"
-        }
-    ],
-    "require": {
-        "php": ">=5.4",
-        "symfony/symfony": "~2.7|~3.0|~4.0",
-        "authy/php": "~2.4"
-    },
-    "autoload": {
-        "psr-4": {
-            "Grizzlylab\\Bundle\\AuthyBundle\\": ""
-        }
+  "name": "grizzlylab/authy-bundle",
+  "type": "symfony-bundle",
+  "description": "Authy bundle",
+  "keywords": [
+    "Authy",
+    "security",
+    "authentication"
+  ],
+  "homepage": "https://github.com/grizzlylab/AuthyBundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jean-Louis Pirson",
+      "email": "jl.pirson@grizzlylab.be"
     }
+  ],
+  "require": {
+    "php": "^7.4",
+    "authy/php": "~3.0",
+    "symfony/http-kernel": "^4.4 || ~5.0"
+  },
+  "require-dev": {
+    "ergebnis/composer-normalize": "^2.2",
+    "friendsofphp/php-cs-fixer": "^2.16",
+    "phpro/grumphp": "^0.17.2",
+    "phpstan/phpstan": "^0.12.11"
+  },
+  "autoload": {
+    "psr-4": {
+      "Grizzlylab\\Bundle\\AuthyBundle\\": ""
+    }
+  }
 }
