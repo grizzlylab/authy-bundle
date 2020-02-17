@@ -1,18 +1,20 @@
 GrizzlylabAuthyBundle
 ======================
 
-###1. Requirements
-   * "php": ">=5.4"
-   * "symfony/symfony": "~2.7|~3.0"
-   * "symfony/swiftmailer-bundle": "~2.3"
+This is a simple wrapper of "authy/php" to easily configure it inside a Symfony project.
 
-###2. Installation
+### 1. Installation
 
-- ```composer require 'grizzlylab/authy-bundle@dev-master'```
+- ```composer require 'grizzlylab/authy-bundle@2.0'```
 - in AppKernel.php: ```new Grizzlylab\Bundle\AuthyBundle\GrizzlylabAuthyBundle()```
 
-###3. Configuration
-[TODO]
+### 2. Configuration
+
+```yml
+grizzlylab_authy:
+    api_key: "%authy_key%"
+    api_url: ~
+```
 
 License
 -------

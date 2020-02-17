@@ -2,12 +2,13 @@
 
 namespace Grizzlylab\Bundle\AuthyBundle\DependencyInjection;
 
+use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
 
 /**
- * Class Configuration
- * @package Grizzlylab\Bundle\AuthyBundle\DependencyInjection
+ * Class Configuration.
+ *
  * @author  Jean-Louis Pirson <jl.pirson@grizzlylab.be>
  */
 class Configuration implements ConfigurationInterface
@@ -17,13 +18,17 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('grizzlylab_authy');
-        $rootNode
-            ->children()
-            ->scalarNode('api_key')->end()
-            ->scalarNode('api_url')->defaultValue('null')->end();
+        $treeBuilder = new TreeBuilder('grizzlylab_authy');
 
-        return $treeBuilder;
+        /**
+         * @var ArrayNodeDefinition
+         */
+        $rootNode = $treeBuilder->getRootNode();
+
+        return $rootNode
+            ->children()
+                ->scalarNode('api_key')->end()
+                ->scalarNode('api_url')->defaultValue('null')->end()
+            ;
     }
 }
