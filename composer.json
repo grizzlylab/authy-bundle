@@ -18,7 +18,7 @@
   "require": {
     "php": "^7.4",
     "authy/php": "~3.0",
-    "symfony/http-kernel": "^4.4 || ~5.0"
+    "symfony/http-kernel": "^4.4 || ^5.2"
   },
   "require-dev": {
     "ergebnis/composer-normalize": "^2.2",
