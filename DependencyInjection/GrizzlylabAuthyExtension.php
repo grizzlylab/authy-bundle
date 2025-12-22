@@ -14,16 +14,22 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
  */
 class GrizzlylabAuthyExtension extends Extension
 {
-    /**
-     * {@inheritdoc}
-     */
     public function load(array $configs, ContainerBuilder $container): void
     {
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        $container->setParameter('grizzlylab_authy_api_key', $config['api_key']);
-        $container->setParameter('grizzlylab_authy_api_url', $config['api_url']);
+        /**
+         * @var string|null $apiKey
+         */
+        $apiKey = $config['api_key'];
+        /**
+         * @var string|null $apiUrl
+         */
+        $apiUrl = $config['api_url'];
+
+        $container->setParameter('grizzlylab_authy_api_key', $apiKey);
+        $container->setParameter('grizzlylab_authy_api_url', $apiUrl);
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');

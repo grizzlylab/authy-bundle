@@ -11,9 +11,6 @@ use Authy\AuthyApi;
  */
 class AuthyApiWrapper extends AuthyApi
 {
-    /**
-     * {@inheritdoc}
-     */
     public function __construct(string $apiKey, ?string $apiUrl = null)
     {
         if (null == $apiUrl) {

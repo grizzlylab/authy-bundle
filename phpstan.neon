@@ -2,11 +2,5 @@ parameters:
     level: max
     paths:
         - .
-    excludes_analyse:
+    excludePaths:
         - vendor
-    ignoreErrors:
-        # The DependencyInjection returns are very complex to deal with
-        -
-            message: '#.*NodeParentInterface\|null.*#'
-            path: ./DependencyInjection/Configuration.php
-    checkMissingIterableValueType: false

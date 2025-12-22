@@ -8,7 +8,7 @@ parameters:
         phpcsfixer2:
             allow_risky: false
             cache_file: ~
-            config: .php_cs
+            config: .php-cs-fixer.php
             rules: ["@@Symfony"]
             using_cache: true
             config_contains_finder: false
