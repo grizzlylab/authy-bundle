@@ -19,7 +19,7 @@
     "php": "^8.1",
     "authy/php": "4.0.0-rc.2",
     "guzzlehttp/guzzle": "^7.0",
-    "symfony/http-kernel": "^5.4"
+    "symfony/http-kernel": "^5.4|^6.0"
   },
   "require-dev": {
     "ergebnis/composer-normalize": "^2.48",
